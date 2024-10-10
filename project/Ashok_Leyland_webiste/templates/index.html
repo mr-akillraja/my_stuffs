@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        header {
+            text-align: center;
+        }
+
+        header img {
+            width: 200px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='Ashok_Leyland_logo_PNG5.png') }}" alt="Header Image">
+    </header>
+    <div class="search-form">
+        <h1>Search Page</h1>
+        <form action="/search" method="post">
+            <label for="asset_id">Asset ID:</label>
+            <input type="text" name="asset_id" id="asset_id">
+            <button type="submit">Search</button>
+        </form>
+
+        <form action="/search" method="post">
+            <label for="serial_number">Serial Number:</label>
+            <input type="text" name="serial_number" id="serial_number">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</body>
+</html>

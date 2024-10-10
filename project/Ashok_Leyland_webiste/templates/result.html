@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        p {
+            text-align: center;
+            font-style: italic;
+        }
+
+        .back-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Result</h1>
+    {% if asset_id.empty and serial.empty %}
+        <p>No matching result found.</p>
+    {% else %}
+        {% if not asset_id.empty %}
+            <table>
+                <tr>
+                    <th>SL:NO</th>
+                    <th>ASSET ID</th>
+                    <th>CATEGORY</th>
+                    <th>MAKE</th>
+                    <th>MODEL</th>
+                    <th>SERIAL NUM</th>
+                    <th>CONTACT NUM</th>
+                    <th>DEPT</th>
+                    <th>USER MAIL ID</th>
+                    <th>AL RM MAIL ID</th>
+                    <th>UPS ASSET ID</th>
+                    <th>UPS MAKE</th>
+                    <th>PRINTER ASSET ID</th>
+                </tr>
+                {% for index, row in asset_id.iterrows() %}
+                    <tr>
+                        <td>{{ row['SL:NO'] }}</td>
+                        <td>{{ row['ASSET ID'] }}</td>
+                        <td>{{ row['CATEGORY'] }}</td>
+                        <td>{{ row['MAKE'] }}</td>
+                        <td>{{ row['MODEL'] }}</td>
+                        <td>{{ row['SERIAL NUM'] }}</td>
+                        <td>{{ row['CONTACT NUM'] }}</td>
+                        <td>{{ row['DEPT'] }}</td>
+                        <td>{{ row['USER MAIL ID'] }}</td>
+                        <td>{{ row['AL RM MAIL ID'] }}</td>
+                        <td>{{ row['UPS ASSET ID'] }}</td>
+                        <td>{{ row['UPS MAKE'] }}</td>
+                        <td>{{ row['PRINTER ASSET ID'] }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% elif not serial.empty %}
+            <table>
+                <tr>
+                    <th>SL:NO</th>
+                    <th>ASSET ID</th>
+                    <th>CATEGORY</th>
+                    <th>MAKE</th>
+                    <th>MODEL</th>
+                    <th>SERIAL NUM</th>
+                    <th>CONTACT NUM</th>
+                    <th>DEPT</th>
+                    <th>USER MAIL ID</th>
+                    <th>AL RM MAIL ID</th>
+                    <th>UPS ASSET ID</th>
+                    <th>UPS MAKE</th>
+                    <th>PRINTER ASSET ID</th>
+                </tr>
+                {% for index, row in serial.iterrows() %}
+                    <tr>
+                        <td>{{ row['SL:NO'] }}</td>
+                        <td>{{ row['ASSET ID'] }}</td>
+                        <td>{{ row['CATEGORY'] }}</td>
+                        <td>{{ row['MAKE'] }}</td>
+                        <td>{{ row['MODEL'] }}</td>
+                        <td>{{ row['SERIAL NUM'] }}</td>
+                        <td>{{ row['CONTACT NUM'] }}</td>
+                        <td>{{ row['DEPT'] }}</td>
+                        <td>{{ row['USER MAIL ID'] }}</td>
+                        <td>{{ row['AL RM MAIL ID'] }}</td>
+                        <td>{{ row['UPS ASSET ID'] }}</td>
+                        <td>{{ row['UPS MAKE'] }}</td>
+                        <td>{{ row['PRINTER ASSET ID'] }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% endif %}
+    {% endif %}
+
+    <div class="back-button">
+        <button onclick="window.history.back()">Back</button>
+    </div>
+</body>
+</html>
