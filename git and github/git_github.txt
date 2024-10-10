@@ -1,0 +1,297 @@
+                                           Introduction to Git and GitHub
+                                           
+        --> Git :
+                 # was create in 2005 by Linus Torvalds.
+                 # It act as both client and server on a single Machine.
+                 # Used for linux kernel development .
+                 # Is a Devops tool used for Source code Management .
+                 # It is Free and Open-Source Version Control System["VCS"]
+                 # To Download git : https://git-scm.com [scm :  Source Control Management]
+                 # vcs and scm both has same meaning.
+                 
+       
+       --> GitHub:
+                  # It is a code Hosting Platform for Version Control System . 
+                  # used to work Together from anywhere . 
+                  # can be shared to anyone at free of cost . 
+                  
+            commands :
+                 1. ~ Diff [linux] : used to compare two files with same extensions.
+                                                # syntax :
+                                                            diff file_1 file_2 
+                                                            
+                      ~ Diff-u [Linux] : used to store the result in the "change.diff" file . 
+                                        # syntax :
+                                                  diff-u file_1 file_2 > change.diff
+                                                  {" > " means directing the changes to a new diff file }
+                      ~ Patch [Linux] : used to add the differences to file2 
+                                     # syntax :
+                                              diff file_name < change.diff
+                                              {" < " means redirecting the changes to the file2}
+                    * fc [Windows] : used to compare two files with same extensions and stores it in FileCompares[fc] file .
+                                      # syntax :
+                                                  fc  file_1 file_2 > change.fc
+                                                  {" > " means directing the changes to a new diff file }
+        --> Version Control System[vcs] :
+                                   # It is used to keep track of our codes and helps multiple user to access a comman file without any traffics.
+                                   # The files are in Repositories  and making using of them by others.
+                                   # Types of vcs which are available.
+                                   # Stores the configuration and histroy of the files.
+                                   # Mainly used for project development and Educational purpose.
+                                   # have to the update version of DHCP proctocol.
+                                   
+                                   
+        --> Install GIT :
+                         # To Download git : https://git-scm.com [scm :  Source Control Management]
+                         
+        --> Use the Following commands :
+                                        # check the Git is installed on your system are not through checking the version of the Git .
+                                                      command : git --version or git -v
+                                                      
+                                        # to change the email address you associate with your Git commits.
+                                                command : git config user.email "<email_id>"
+                                                command : git config user.name <"name">
+                                        
+                                        # to create new repository through command prompt and creates a new repository in the current directroy.
+                                                command : git init
+                                          
+                                        # to get current status of the repository.
+                                                command : git status
+                                          
+                                        # to transfer the content from the staging area into the .git directory we run commit command.
+                                                command : git commit 
+                                        
+                                        # to show the detailed log of all the commits made in the project.
+                                                 command : git log -p
+                                         
+                                        # to show the actual information of the commit with associated path.
+                                                 command : git show <id of the patch command>
+                                                 
+                                        # to check how many lines are added and deleted in the repository.
+                                                 command : git log --stat
+                                         
+                                        # to remove the file from the git directory.
+                                                 command : git rm <filename>
+                                                 
+                                        # to rename a file and move files between the directories.
+                                                 command : git mv <filename >
+                                                 command : git mv <filename><destinataion directory>
+                                                 
+                                        # to revert the changes what we have made in the file before sending staging state .
+                                                 command : git checkout <filename>
+                                                 
+                                        # To show the differnece between the various commits 
+                                                 command : git diff
+                                         
+                                        # To show the difference between the named commits.
+                                                 command : git diff <named>
+                                        
+                                        # To change from one branch to another branch.
+                                                 command : git checkout <branch_name>
+                                                 
+                                        # To reverse the commit what we have made in the file.
+                                                command : git revert <commit_id>
+                                                
+                                        # To maintain the branches in the repository 
+                                                 commad : git branch
+                                                 
+                                        # To create a new branches in the repository
+                                                 command : git branch <branch_new>
+                                                 
+                                        # To delete the branch in the repository
+                                                 command : git branch -d <branch_new>
+                                                 
+                                        # To merge two branched in the repository
+                                                 command : git merge <branch_name>
+                                         
+                                        # To abort the merge actions in the repository
+                                                 command : git merge --abort
+                                                 
+                                        # To show the merge graph in the git
+                                                 command : git log --graph --oneline
+                                                 
+                                        
+                                             
+        --> Git has Three parts:
+        
+                        --> Git Directory : It contains the History of the files and changes made in the file .  
+        
+        
+                        --> Working Tree :  All the files and folders that we add to the Git repository residing outside the . git folder are                                               known as the Git working tree.
+        
+                        --> Staging Area(index) : A file maintained by Git that contains all of the information about what files and changes are                                                   going to go into yourv next commit.
+        --> Track and Untrack files :
+                       --> Track files :
+                                         Three states :
+                                                > Modified State :
+                                                                  1. It contains the changes what we made and It is not committed yet.
+                                                                  2. Modifying operations are Adding,Modifying,Deleting.
+                                                                  3. Git Notices the changes what we made.
+                                                                  4. Nothing is stored until the modified file is moved to staging area.
+                                               > Staged State : 
+                                                               1. The files which comes from the modified state . 
+                                                               2. The Modified files are ready to commit.
+                                               
+                                               > Commit State : 
+                                                               1.The Staged file is been commited and stored in the Git Directory.
+                       
+         --> WorkFlow of Git:
+                             > Enter file name:
+                                   # syntax : git <filename>
+                             
+                            > Check the Git status Whether : 
+                                  # Syntax : git status
+                              
+                            > Then Do the changes in the selected file and make them to commit . 
+                                  # Syntax : git commit 
+                                  
+        --> Github :
+                    - Commands:
+                                # To get the file of the github to the local computer.
+                                    syntax : git clone [url]
+                                    
+                                # To send the file from the local repository to the remote repository.
+                                    syntax : git push
+                                    
+                                # To Get the newest update from the remote repository.
+                                    syntax : git pull 
+                                    
+                                # To get the remote repository configuration or the functions that are executed on the remote repository.
+                                    syntax : git remote -v
+                                    
+                                # We want more information regarding the remote repository.
+                                    syntax : git remote origin
+                                    
+                                # To get the remote branches that we are working or trying to work on .
+                                    syntax : git branch -r
+                                    
+                                # To get the status of the remote respository.
+                                    - The master branch in the local repository called as origin.
+                                    syntax : git status
+                                    
+                                # This command copies the commit that are done in the remote repository to remote branches.
+                                    syntax : git fetch
+                                    
+                                # To list the remote Repository 
+                                    syntax : git remote
+                                    
+                                # To describe the single repository in detail
+                                syntax : git remote show <file_name>
+                                
+                                # 
+                                    
+                    - Distributed
+                        # Every Developer will have the copy of the whole repository in their local machine.
+                    - GitHub is the online web-based git repository hosting service.
+                    - GitHub helps us to access the files and shares the files  in the web and copy or clone them into our local computer.
+                    
+                    - Creating a repository:
+                                            - create a repository in the GitHub
+                                            - Add a README.md to the repository.
+                                            - open the terminal 
+                                            - enter the git clone command with url given in the github where you have created the repository.
+                                            - edit the code of the README.md file in the local text editor.
+                                            - after editing,push that file into the repository using "git push" command.
+                                            - check the changes in the github whether you eidts are present in the README.md file of the                                                       repository.
+                     - Remote Repository:
+                                        - The projects what we are working on will be hosted on the server or on the internet for the future                                               development.
+                                        - Git uses remote branches to keep the copies of the file that are stored in the remote repository.
+                      
+                     - Local Repository:
+                                        - The projects what we are working on will resides inside the local computer of the developer.
+                                        
+                                   
+                     - Pushing Remote branches :
+                                         - create a new branch 
+                                         - make multiple changes in the file 
+                                         - do commit for each changes you have done.
+                                         - then push to the remote repository to make any changes in the code which can done by others.
+                                         - then again merge it with the main branch of the remote repository.
+                                        
+                      - Rebasing your Branch :
+                                         - another option for using git merge.
+                                         - git rebase means changing our branch commit to used branch.
+                                         - while using git rebase we are not going for a three-way merge,directly we are going for the straight                                              forward meage in the repository.
+                                         - This is a way of creating the same file in the different branch of the same repository.
+                                         - trying to merge the new edited same file to the main branch for that we are using.
+                                                 syntax : git rebase main 
+                                         - After this command jumping into the main branch for merging in the remote repository .
+                                                 syntax : git merge <branch_name>
+                                         - After that deleting the created branch in the remote repository using.
+                                                 syntax : git push --delete origin <branch_name> 
+                                         - After that deleting the branch in the local repository also using.
+                                                 syntax : git branch -d <branch_name>
+                                         - After that pushing the changes in the remote repository using.
+                                                 syntax : git push
+             --> Forking :
+                      Creating a copy of the given repository so that it can be later used by the user if any changes are done by the user's                           of today's world.
+             
+             --> Pull request:
+                              It is series or a muliple commits that you send to the user.so that the user can incorparate with their tree
+                                  
+             --> workflow of git pull request:
+                                     - for making the more changes or multiple changes in the file of the repository.for this We can move the                                          file to the local repository which means to our computer for editing the file. 
+                                     - Get the link of the other user project which has errors to modify 
+                                             syntax: git clone <url>
+                                     - After cloning get into the directory of the folder.
+                                             syntax : cd <folder>
+                                     - Then create a new branch in the repository.
+                                             syntax : git checkout -b <branch_name>
+                                     - Then open the file try to edit the file make the changes you have to do.
+                                     - Then push the file in to  the user repository
+                                             syntax : git push -origin <remote branch>
+                                     - Then going to the GitHub for the changes have made.
+                                     - Then jumping into the branch and making the changed file to merge and to make a pull request.
+                                     - Once the pull request is initalized the user will have the notify that someone has edited something                                              related to the file and The user has to decide whether the changes can be done or not.
+                                     
+                                     
+             --> updating the existing pull request :
+                             - getting the file through the url.
+                             - adding some changes to the file with same pull request.
+                             - then pushing the file into the repository.
+                             - checking the github the file has two commits in the repository.
+                             - and same file has both commit's or changes in one file
+             
+             --> updating with another pull request :
+                             - Same procedure as followed for the existing pull request.
+                             - only thing we have to create a separate branch and make the changes.
+                             - then we have to push it into the repository.
+                          
+             --> combining the commits :
+                             - For combining the commits we are going to use.
+                                     syntax : git rebase -i <branch>
+                                     * This shows the list of commits what we have done in the file.
+                                     * For combining the list of commits we have to use squash or fix up.
+                                     * Changing the pick to squash
+                                         -  it differinate the commits and makes it into single commit.
+                                     
+             --> Code Review :
+                              - Going to someone's codes or documentation or configuration then checking those things which are following the 
+                                correct pattern or sequence.
+                              - We are using the code reviewing tool is used to review the file and produces the output to proceed or some                                       improvement is required.
+                              - Once the user sees the commits what we have changes,he used to make reviews on the changes line by line by 
+                                what we have changes
+                                        `-> for that we have click on views on the github of the repository where the file is present.
+                                         -> Try to look at the reviews and if the user want to make changes,change it and push the file to the 
+                                            repository.
+                                     
+             --> Issue Tracker :
+                               - When it comes to coordinating who does what and when for that we are using the issue tracker.
+                               - It helps us to check whether the given issue is completed or not by anyone.
+                               - And also help us to fix the person who is involving in fixing these issues.
+                              
+             --> Pipelines :
+                            - It is the steps involved to get the result.
+             
+             --> Artifacts :
+                            - It is a types of file which is the generated file of the Pipelines
+                              
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                  
